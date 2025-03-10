@@ -4,29 +4,31 @@
 
 ### Complete Agent Setup
 
-1. **Choose Basic or Standard Agent Setup**
+1. **Choose Basic or Standard Agent setup**
 
-**Basic Setup**:  Agents use multitenant search and storage resources fully managed by Microsoft. You don't have visibility or control over these underlying Azure resources.
+      **Basic Setup**:  Agents use multitenant search and storage resources fully managed by Microsoft. You don't have visibility or control over these underlying Azure resources.
 
-**Standard Setup**: Agents use customer-owned, single-tenant search and storage resources. With this setup, you have full control and visibility over these resources, but you incur costs based on your usage.
+      **Standard Setup**: Agents use customer-owned, single-tenant search and storage resources. With this setup, you have full control and visibility over these resources, but you incur costs based on your usage.
 
-1. **Deploy a setup template**
+1. **Deploy a template**
 
 | Template | Description   | Auto-deploy |
 | ------------------- | -----------------------------------------------| -----------------------|
 |`basic-agent-identity.bicep`| Deploy a basic agent setup that uses Managed Identity authentication on the AI Services/AOAI connection. | [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azure-ai-agent-service%2Fbasic-agent-identity%2Fazuredeploy.json)
 | `standard-agent.bicep`  | Deploy a standard agent setup that uses Managed Identity authentication on the AI Services/AOAI connection. | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Frefs%2Fheads%2Fmaster%2Fquickstarts%2Fmicrosoft.azure-ai-agent-service%2Fstandard-agent%2Fazuredeploy.json)
-| `network-secured-agent.bicep`  | Deploy a network secured agent setup that uses User Managed Identity authentication on the Agent Connections. | [![Deploy to Azure](https://aka.ms/deploytoazurebutton)]
 
 ### Create and connect a Bing resource
 
 1. **Create a Grounding with Bing Search resource**
 1. **Create a project connection**
 
+### Install the requried dependencies
 You will need to install the optional Semantic Kernel `azure` dependencies if you haven't already via:
 
 ```bash
 pip install semantic-kernel[azure]
+pip install azure-ai-projects
+pip install azure-identity
 ```
 
 Before running an Azure AI Agent, modify your .env file to include:
