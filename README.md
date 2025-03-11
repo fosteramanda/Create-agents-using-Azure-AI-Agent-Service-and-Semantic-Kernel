@@ -19,9 +19,12 @@
 
 ### Create and connect a Bing resource
 
-1. **Create a Grounding with Bing Search resource and connect it to your project**
-    You need to have owner or contributor role in your subscription or resource group.
-    You must create a Grounding with Bing Search resource and connect it to your project. [See details](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview)
+**Create a Grounding with Bing Search resource and connect it to your project**
+
+You must create a Grounding with Bing Search resource and connect it to your project. [See details](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview) 
+
+Note: You need to have owner or contributor role in your subscription or resource group.
+
 
 ### Install the requried dependencies
 
